@@ -10,7 +10,7 @@ class TreeSelect extends Field
     protected string $view = 'filament-tree-select::tree-select';
 
     protected string $relationship;
-    
+
     protected string $labelAttribute;
 
     protected function setUp(): void
@@ -52,12 +52,12 @@ class TreeSelect extends Field
                 if ($item->parent) {
                     $breadcrumbs = collect([$item->parent->name]);
                     $current = $item->parent;
-            
+
                     while ($current->parent) {
                         $breadcrumbs->prepend($current->parent->name);
                         $current = $current->parent;
                     }
-            
+
                     $item['breadcrumbs'] = $breadcrumbs->join(' > ');
                 }
 
