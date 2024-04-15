@@ -27,7 +27,7 @@ class FilamentTreeSelectServiceProvider extends PackageServiceProvider
         // Asset Registration
         FilamentAsset::register(
             [
-                AlpineComponent::make('filament-tree-select', __DIR__ . '/../resources/dist/filament-tree-select.js'),
+                AlpineComponent::make('filament-tree-select', __DIR__.'/../resources/dist/filament-tree-select.js'),
             ],
             'magissolutions/filament-tree-select'
         );
